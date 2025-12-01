@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Ribbons from "@/components/Ribbons";
-import { DockDemo } from "@/components/Dock";
+import TechStackDock from "@/components/TechStackDock";
+import WorkExpCloud from "@/components/CloudOrbit";
+import { ProjectCards } from "@/components/Projects";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 
@@ -11,25 +13,32 @@ export default function Home() {
         <div className="flex flex-col items-center gap-6 text-center">
           <div className="relative overflow-hidden rounded-lg shadow-sm ">
             <BorderBeam lightColor="#FF2056" lightWidth={350} duration={8} />
-            <div className="h-full w-full p-8">
+            <div className="h-full w-full p-8 md:px-10 lg:px-16">
               <FadeUpWord
                 as="h1"
-                className="max-w-md text-5xl font-semibold leading-15 tracking-tight text-black dark:text-zinc-50"
+                className="max-w-md md:text-5xl lg:text-6xl font-semibold leading-15 tracking-tight text-black dark:text-zinc-50"
               >
                 This is Henry
               </FadeUpWord>
               <FadeUpWord
                 as="h2"
-                className="max-w-2xl text-2xl font-medium leading-10 tracking-tight text-black dark:text-zinc-50"
+                className="max-w-2xl md:text-2xl lg:text-3xl font-medium leading-10 tracking-tight text-black dark:text-zinc-50"
               >
                 CS @ Carleton & Full-Stack Development
               </FadeUpWord>
             </div>
           </div>
-
-          <DockDemo />
-          <Ribbons />
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
+            <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+              I enjoy working with:
+            </p>
+            <TechStackDock />
+          </div>
         </div>
+        <div className="flex gap-4">
+          <ProjectCards />
+        </div>
+
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}

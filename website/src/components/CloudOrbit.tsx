@@ -115,7 +115,7 @@ const orbitingImagesData = [
   },
 ];
 
-export function CloudOrbitDemo() {
+export default function WorkExpCloud() {
   return (
     <CloudOrbit
       duration={3}

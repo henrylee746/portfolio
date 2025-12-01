@@ -1,6 +1,6 @@
 import { Dock, DockIcon } from "@/components/ui/dock";
 
-export function DockDemo() {
+export default function TechStackDock() {
   const dockItems = [
     {
       src: "https://cdn.badtz-ui.com/images/components/dock/react-logo.webp",
