@@ -1,10 +1,9 @@
 import Image from "next/image";
-import Ribbons from "@/components/Ribbons";
 import TechStackDock from "@/components/TechStackDock";
-import WorkExpCloud from "@/components/CloudOrbit";
 import { ProjectCards } from "@/components/Projects";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
+import { MarqueeDemo } from "@/components/WorkList";
 
 export default function Home() {
   return (
@@ -35,8 +34,9 @@ export default function Home() {
             <TechStackDock />
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex md:flex-col gap-4 mt-8 ">
           <ProjectCards />
+          <MarqueeDemo />
         </div>
 
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">

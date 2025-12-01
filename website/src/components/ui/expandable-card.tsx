@@ -165,7 +165,7 @@ export function ExpandableCard({
             <img
               src={src}
               alt={title}
-              className="h-56 w-64 rounded-lg object-cover object-center"
+              className="md:h-56 md:w-64 lg:h-72 lg:w-84 xl:h-96 xl:w-128 rounded-lg object-cover"
             />
           </motion.div>
           <div className="flex items-center justify-between">
@@ -187,7 +187,7 @@ export function ExpandableCard({
               aria-label="Open card"
               layoutId={`button-${title}-${id}`}
               className={cn(
-                "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200/90 bg-zinc-50 text-neutral-700 transition-colors duration-300 hover:border-gray-300/90 hover:bg-neutral-50 hover:text-black focus:outline-none dark:border-zinc-900 dark:bg-zinc-950 dark:text-white/70 dark:hover:border-zinc-800 dark:hover:bg-neutral-950 dark:hover:text-white",
+                "flex ml-4 h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200/90 bg-zinc-50 text-neutral-700 transition-colors duration-300 hover:border-gray-300/90 hover:bg-neutral-50 hover:text-black focus:outline-none dark:border-zinc-900 dark:bg-zinc-950 dark:text-white/70 dark:hover:border-zinc-800 dark:hover:bg-neutral-950 dark:hover:text-white",
                 className
               )}
             >
