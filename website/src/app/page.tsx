@@ -1,30 +1,33 @@
 import Image from "next/image";
-import { InfiniteRibbon } from "@/components/ui/infinite-ribbon";
+import Ribbons from "@/components/Ribbons";
+import { DockDemo } from "@/components/Dock";
+import { BorderBeam } from "@/components/ui/border-beam";
+import { FadeUpWord } from "@/components/ui/fade-up-word";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <div className="relative flex h-[350px] w-[500px] items-center justify-center">
-            <InfiniteRibbon rotation={5} className="absolute">
-              Welcome to Henry's webpage!
-            </InfiniteRibbon>
-            <InfiniteRibbon reverse={true} rotation={-5}>
-              Welcome to Henry's webpage!
-            </InfiniteRibbon>
+    <div className="flex min-h-screen py-12 justify-center bg-zinc-50 font-sans dark:bg-black">
+      <main className="flex h-full w-full flex-col items-center justify-between">
+        <div className="flex flex-col items-center gap-6 text-center">
+          <div className="relative overflow-hidden rounded-lg shadow-sm ">
+            <BorderBeam lightColor="#FF2056" lightWidth={350} duration={8} />
+            <div className="h-full w-full p-8">
+              <FadeUpWord
+                as="h1"
+                className="max-w-md text-5xl font-semibold leading-15 tracking-tight text-black dark:text-zinc-50"
+              >
+                This is Henry
+              </FadeUpWord>
+              <FadeUpWord
+                as="h1"
+                className="max-w-2xl text-2xl font-medium leading-10 tracking-tight text-black dark:text-zinc-50"
+              >
+                CS @ Carleton & Full-Stack Development
+              </FadeUpWord>
+            </div>
           </div>
+          <DockDemo />
+          <Ribbons />
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
