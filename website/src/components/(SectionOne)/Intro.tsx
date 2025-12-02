@@ -1,15 +1,10 @@
 import { BorderBeam } from "@/components/ui/border-beam";
-import { AuroraText } from "@/components/ui/aurora-text";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import Link from "next/link";
 
-{
-  /*Icons*/
-}
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TaskIcon from "@mui/icons-material/Task";
+import { Github, FileText } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 
 const Intro = () => {
   return (
@@ -36,17 +31,17 @@ const Intro = () => {
         <div className="flex gap-4">
           <Link href="https://github.com/henrylee746">
             <ShimmerButton className="shadow-2xl flex gap-2 items-center">
-              <GitHubIcon />
+              GitHub <Github />
             </ShimmerButton>
           </Link>
-          <Link href="https://github.com/henrylee746">
-            <ShimmerButton className="shadow-2xl">
-              <TaskIcon />
+          <Link href="https://www.linkedin.com/in/hlee750/overlay/1764640946765/single-media-viewer/?profileId=ACoAAEED0voBXuSCrHDuOl2s_40ii8t6h5pOs6A">
+            <ShimmerButton className="shadow-2xl flex gap-2 items-center">
+              Resume <FileText />
             </ShimmerButton>
           </Link>
           <Link href="https://www.linkedin.com/in/hlee750/">
-            <ShimmerButton className="shadow-2xl">
-              <LinkedInIcon />
+            <ShimmerButton className="shadow-2xl flex gap-2 items-center">
+              LinkedIn <FaLinkedin />
             </ShimmerButton>
           </Link>
         </div>
