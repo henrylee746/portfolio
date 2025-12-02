@@ -3,7 +3,7 @@ import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { TextAnimate } from "@/components/ui/text-animate";
-
+import { RetroGridComponent } from "./(cardComponents)/RetroGrid";
 import BentoBoxCards from "./BentoBoxCards";
 
 const About = () => {
@@ -49,6 +49,7 @@ const About = () => {
       </div>
 
       <BentoBoxCards />
+      <RetroGridComponent />
     </>
   );
 };
