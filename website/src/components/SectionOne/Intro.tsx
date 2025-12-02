@@ -3,7 +3,8 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import Link from "next/link";
 
-import { FaLinkedin, FaGithub, FaFile } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoIosPaper } from "react-icons/io";
 
 const Intro = () => {
   return (
@@ -35,7 +36,7 @@ const Intro = () => {
           </Link>
           <Link href="https://www.linkedin.com/in/hlee750/overlay/1764640946765/single-media-viewer/?profileId=ACoAAEED0voBXuSCrHDuOl2s_40ii8t6h5pOs6A">
             <ShimmerButton className="shadow-2xl flex gap-2 items-center">
-              Resume <FaFile />
+              Resume <IoIosPaper />
             </ShimmerButton>
           </Link>
           <Link href="https://www.linkedin.com/in/hlee750/">

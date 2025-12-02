@@ -35,8 +35,8 @@ const About = () => {
           delay={0.3}
           className="flex gap-3 text-2xl font-semibold p-4 text-center"
         >
-          Education: Honours Bachelor of Computer Science @ Carleton University
-          (Sep. 2022 - June 2027 expt.)
+          🏫 Education: Honours Bachelor of Computer Science @ Carleton
+          University (Sep. 2022 - June 2027 expt.)
         </BlurReveal>
       </div>
       <BentoBoxCards />

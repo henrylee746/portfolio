@@ -55,10 +55,10 @@ const BentoCard = ({
     )}
     {...props}
   >
-    <div className="flex-1 min-h-0 max-h-[75%] overflow-hidden flex items-center justify-center">
+    <div className="flex-1 max-h-[75%] overflow-hidden flex items-center justify-center">
       {background}
     </div>
-    <div className="flex-shrink-0 p-4 min-h-[25%] items-end flex">
+    <div className="p-4 min-h-[25%] items-end flex">
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 lg:group-hover:-translate-y-10">
         <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
         <h3 className="text-xl md:text-lg font-semibold text-neutral-700 dark:text-neutral-300">

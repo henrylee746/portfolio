@@ -23,7 +23,7 @@ let tools = [
     color: "#FFB800",
   },
   {
-    name: "Project Management Tools",
+    name: "Project Management",
     description: "Jira, Azure DevOps, GitHub Projects",
     icon: "💬",
     color: "#FF3D71",
@@ -68,7 +68,7 @@ const Notification = ({ name, description, icon, color }: Item) => {
         </div>
         <div className="flex flex-col overflow-hidden">
           <figcaption className="flex flex-row items-center text-lg font-medium whitespace-pre dark:text-white">
-            <span className="text-sm sm:text-lg">{name}</span>
+            <span className="text-lg sm:text-xs">{name}</span>
           </figcaption>
           <p className="text-xs font-normal dark:text-white/60">
             {description}
