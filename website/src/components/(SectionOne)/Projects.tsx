@@ -1,8 +1,6 @@
 import { ExpandableCard } from "@/components/ui/expandable-card";
 import { GradientSlideButton } from "@/components/ui/gradient-slide-button";
 import Link from "next/link";
-import tmdSrc from "./images/tmd.png";
-import fitnessSrc from "./images/fitness.png";
 
 export function TypographyBlockquote({ content }: { content: string }) {
   return (
@@ -14,7 +12,7 @@ const TMDProject = () => {
   return (
     <ExpandableCard
       title="Team Metrics Dashboard"
-      src="https://private-user-images.githubusercontent.com/96128004/497277966-63823c0b-96f7-439d-a4aa-2eeecd613f87.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQ2NDgxMzAsIm5iZiI6MTc2NDY0NzgzMCwicGF0aCI6Ii85NjEyODAwNC80OTcyNzc5NjYtNjM4MjNjMGItOTZmNy00MzlkLWE0YWEtMmVlZWNkNjEzZjg3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTEyMDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMjAyVDAzNTcxMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ2MGE2ZTVhOTQ3ZjU1Y2E4NDkxYWFmNWNmNWI5MzkyZGU0ZDk0OGNhYjdhN2ZlZGRmZWRiNGRmOWRhNTkzMTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.jCRNWH-HhRDtXgYbe_peNdrr3ip0wop9xKWS_DCET7g"
+      src="/tmd.png"
       description="React/TypeScript, Supabase, Node.js/Express"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
@@ -64,7 +62,7 @@ const HealthAndFitnessProject = () => {
   return (
     <ExpandableCard
       title="Health and Fitness Management Tool"
-      src="https://private-user-images.githubusercontent.com/96128004/521064745-0ca469ea-d24d-46ce-af0e-c030ed65da47.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjQ2MzY0MzgsIm5iZiI6MTc2NDYzNjEzOCwicGF0aCI6Ii85NjEyODAwNC81MjEwNjQ3NDUtMGNhNDY5ZWEtZDI0ZC00NmNlLWFmMGUtYzAzMGVkNjVkYTQ3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTEyMDIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUxMjAyVDAwNDIxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJjMWY2OTNmOWFjOGJhMGJkMTdlMDEyYTNjYmQ0YjQwYmNiNDgzY2Q0NDg2MDQ3NzNiMDdjOWQ1NDM2MGQwNWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Ehgilt6JUIPKEZa1A6TU3Za62dY7Kb69I9gqnkSMwB4"
+      src="/fitness.png"
       description="React/TypeScript, Next.js, PrismaORM"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >

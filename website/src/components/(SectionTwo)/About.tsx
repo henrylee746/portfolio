@@ -1,11 +1,11 @@
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
-import { ParliamentImageSplit } from "./ParliamentImageSplit";
+import BentoBoxCards from "./BentoBoxCards";
 
 const About = () => {
   return (
     <>
-      <div className="relative overflow-hidden rounded-lg shadow-sm mt-8">
+      <div className="relative overflow-hidden rounded-lg shadow-sm m-8">
         <BorderBeam lightColor="#FAFAFA" lightWidth={350} duration={8} />
         <div className="h-full w-screen p-8 md:px-10 lg:px-16 flex gap-4 justify-between items-center">
           <div>
@@ -20,7 +20,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <ParliamentImageSplit />
+      <BentoBoxCards />
     </>
   );
 };
