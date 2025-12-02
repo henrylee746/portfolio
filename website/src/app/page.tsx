@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-4">
             <FadeUpWord
               as="h2"
-              className="max-w-2xl md:text-2xl lg:text-3xl font-medium leading-10 tracking-tight text-black dark:text-zinc-50"
+              className="max-w-2xl md:text-2xl lg:text-3xl font-medium leading-10 tracking-tight text-black dark:text-zinc-50 flex justify-center"
               delay={0.3}
             >
               Work Experience + Testimonials

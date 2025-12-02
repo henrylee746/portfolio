@@ -13,7 +13,7 @@ const Intro = () => {
         <div>
           <FadeUpWord
             as="h1"
-            className="max-w-md md:text-5xl mb-6 lg:text-6xl font-semibold leading-15 tracking-tight text-black dark:text-zinc-50
+            className="max-w-md md:text-5xl mb-8 lg:text-6xl font-semibold leading-5 tracking-tight text-black dark:text-zinc-50
                 "
             delay={0.1}
           >
@@ -27,7 +27,7 @@ const Intro = () => {
             CS @ Carleton & Full-Stack Development
           </FadeUpWord>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <Link href="https://github.com/henrylee746">
             <ShimmerButton className="shadow-2xl flex gap-2 items-center">
               GitHub <FaGithub />

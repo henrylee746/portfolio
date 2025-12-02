@@ -23,25 +23,22 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-8">
+      <div className="relative flex flex-col justify-center items-center gap-8">
         <TypingAnimation
           words={["📍Based in: Ottawa, Ontario, Canada"]}
           typeSpeed={60}
           cursorStyle="underscore"
           loop={false}
-          className="text-4xl font-bold"
+          className="text-4xl font-bold text-center"
         />
-
         <BlurReveal
-          delay={0.2}
-          className="text-2xl font-semibold p-4 text-center"
+          delay={0.3}
+          className="flex gap-3 text-2xl font-semibold p-4 text-center"
         >
           Education: Honours Bachelor of Computer Science @ Carleton University
-          <br />
           (Sep. 2022 - June 2027 expt.)
         </BlurReveal>
       </div>
-
       <BentoBoxCards />
       <RetroGridComponent />
     </>

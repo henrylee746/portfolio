@@ -6,7 +6,8 @@ import { IoMdCheckmarkCircle } from "react-icons/io";
 /*Components*/
 import { WorldGlobe } from "./card-components/Globe";
 import { IconCloudTechnologies } from "./card-components/Icons";
-import { FileTree } from "./card-components/FileTree";
+import { AnimatedList } from "../ui/animated-list";
+import { AnimatedListDemo } from "./card-components/AnimantedList";
 
 const features = [
   {
@@ -17,17 +18,17 @@ const features = [
     href: "/",
     cta: "Learn more",
     background: <IconCloudTechnologies />,
-    className: "flex-1 min-w-[250px]",
+    className: "flex-1 ",
   },
   {
     Icon: IoMdCheckmarkCircle,
-    name: "Well-Rounded",
+    name: "Exposure to various tools",
     description:
-      "Through various internships, I became not just interested in web dev, but the entire SDLC and full stack - from design to deployment",
+      "Through various internships, I became not just interested in React and Next.js, but the entire SDLC and full stack - from design to deployment",
     href: "/",
     cta: "Learn more",
-    background: <FileTree />,
-    className: "flex-1 min-w-[250px]",
+    background: <AnimatedListDemo />,
+    className: "flex-1 ",
   },
   {
     Icon: FaPlaneDeparture,
