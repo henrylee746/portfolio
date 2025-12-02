@@ -46,7 +46,9 @@ export function FadeUpWord({
             ease: [0.33, 1, 0.68, 1],
           }}
         >
-          {word}
+          <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-slate-500">
+            {word}{" "}
+          </span>
         </motion.span>
       ))}
     </Component>
