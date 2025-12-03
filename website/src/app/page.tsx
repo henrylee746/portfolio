@@ -3,9 +3,9 @@ import TechStackDock from "@/components/SectionOne/TechStackDock";
 import { ProjectCards } from "@/components/SectionOne/Projects";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { WorkList } from "@/components/SectionOne/WorkList";
-import { Highlighter } from "@/components/ui/highlighter";
 import Intro from "@/components/SectionOne/Intro";
 import Contact from "@/components/SectionThree/Contact";
+import { HyperText } from "@/components/ui/hyper-text";
 
 export default function Home() {
   return (
@@ -13,12 +13,11 @@ export default function Home() {
       <main className="flex min-h-screen w-full flex-col items-center ">
         <div className="flex flex-col items-center gap-6 text-center">
           <Intro />
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
-            <Highlighter action="underline" color="#FF9800">
-              <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-                I enjoy working with:
-              </p>
-            </Highlighter>{" "}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-2">
+            <HyperText className="max-w-lg text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+              I enjoy working with:
+            </HyperText>
+
             <TechStackDock />
           </div>
         </div>

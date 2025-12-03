@@ -1,56 +1,129 @@
+"use client";
+import React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { Dock, DockIcon } from "@/components/ui/dock";
 
-export default function TechStackDock() {
-  const dockItems = [
+/*Icons*/
+import { FaReact } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
+import { FaNode } from "react-icons/fa6";
+import { GrGraphQl } from "react-icons/gr";
+import { BiLogoPostgresql } from "react-icons/bi";
+
+export type IconProps = React.HTMLAttributes<SVGElement>;
+
+const Icons = {
+  react: (props: IconProps) => <FaReact {...props} />,
+  nextjs: (props: IconProps) => <RiNextjsFill {...props} />,
+  typescript: (props: IconProps) => <SiTypescript {...props} />,
+  tailwindcss: (props: IconProps) => <RiTailwindCssFill {...props} />,
+  nodejs: (props: IconProps) => <FaNode {...props} />,
+  graphql: (props: IconProps) => <GrGraphQl {...props} />,
+  postgresql: (props: IconProps) => <BiLogoPostgresql {...props} />,
+};
+
+const DATA = {
+  frontend: [
     {
-      src: "https://cdn.badtz-ui.com/images/components/dock/react-logo.webp",
+      icon: Icons.react,
       name: "React",
       href: "https://react.dev/",
     },
     {
-      src: "https://vectorseek.com/wp-content/uploads/2023/09/Nextjs-Logo-Vector.svg-.png",
+      icon: Icons.nextjs,
       name: "Next.js",
       href: "https://nextjs.org/",
     },
     {
-      src: "https://logospng.org/download/typescript/typescript-2048.png",
+      icon: Icons.typescript,
       name: "TypeScript",
       href: "https://www.typescriptlang.org/",
     },
     {
-      src: "https://cdn.badtz-ui.com/images/components/dock/tailwindcss-logo.webp",
+      icon: Icons.tailwindcss,
       name: "TailwindCSS",
       href: "https://tailwindcss.com/",
     },
+  ],
+  backend: [
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/200px-Node.js_logo.svg.png",
+      icon: Icons.nodejs,
       name: "Node.js",
       href: "https://nodejs.org/en",
     },
-
     {
-      src: "https://assets-global.website-files.com/60acbb950c4d66d0ab3e2007/60d8419eaf2b4343c395d290_graphql.png",
+      icon: Icons.graphql,
       name: "GraphQL",
       href: "https://graphql.org/",
     },
     {
-      src: "https://www.liblogo.com/img-logo/po4159pad6-postgresql-logo-postgresql-icon-png-and-svg-vector-free-download.png",
+      icon: Icons.postgresql,
       name: "PostgreSQL",
       href: "https://www.postgresql.org/",
     },
-  ];
+  ],
+};
 
+export default function TechStackDock() {
   return (
-    <Dock className="max-w-[300px] sm:max-w-none">
-      {" "}
-      {dockItems.map((item, index) => (
-        <DockIcon
-          key={index}
-          src={item.src}
-          name={item.name}
-          href={item.href}
-        />
-      ))}
-    </Dock>
+    <div className="flex items-center justify-center">
+      <TooltipProvider>
+        <Dock direction="middle">
+          {DATA.frontend.map((item) => (
+            <DockIcon key={item.name}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={item.href}
+                    aria-label={item.name}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full"
+                    )}
+                  >
+                    <item.icon className="size-8" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{item.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
+          <Separator orientation="vertical" className="h-full" />
+          {DATA.backend.map((item) => (
+            <DockIcon key={item.name}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={item.href}
+                    aria-label={item.name}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full"
+                    )}
+                  >
+                    <item.icon className="size-8" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{item.name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
+        </Dock>
+      </TooltipProvider>
+    </div>
   );
 }
