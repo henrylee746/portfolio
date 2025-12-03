@@ -1,4 +1,4 @@
-import { TerminalDemo } from "./Terminal";
+import { ContactTerminal } from "./Terminal";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { Meteors } from "@/components/ui/meteors";
@@ -19,9 +19,9 @@ const Contact = () => {
           </FadeUpWord>
         </div>
       </div>
-      <div className="relative h-[500px] flex justify-center items-center w-full overflow-hidden rounded-lg">
+      <div className="relative h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
         <Meteors />
-        <TerminalDemo />
+        <ContactTerminal />
         <Meteors />
       </div>
     </>

@@ -3,6 +3,7 @@ import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { BlurReveal } from "@/components/ui/blur-reveal";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { RetroGridComponent } from "./card-components/RetroGrid";
+import Example from "./Table";
 import BentoBoxCards from "./BentoBoxCards";
 
 const About = () => {
@@ -39,6 +40,7 @@ const About = () => {
           University (Sep. 2022 - June 2027 expt.)
         </BlurReveal>
       </div>
+      <Example />
       <BentoBoxCards />
       <RetroGridComponent />
     </>

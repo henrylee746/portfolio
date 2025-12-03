@@ -4,7 +4,7 @@ import {
   TypingAnimation,
 } from "@/components/ui/terminal";
 
-export function TerminalDemo() {
+export function ContactTerminal() {
   return (
     <Terminal>
       <TypingAnimation>
