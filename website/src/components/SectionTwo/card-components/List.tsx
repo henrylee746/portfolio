@@ -9,10 +9,10 @@ import {
   ListItems,
   ListProvider,
 } from "@/components/kibo-ui/list";
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-faker.seed(123);
+faker.seed(100);
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
@@ -30,19 +30,55 @@ const users = Array.from({ length: 1 })
     image: faker.image.avatar(),
   }));
 
-const ProblemSolverListFeatures = Array.from({ length: 4 })
-  .fill(null)
-  .map(() => ({
-    id: faker.string.uuid(),
-    name: capitalize(faker.company.buzzPhrase()),
-    startAt: faker.date.past({ years: 0.5, refDate: new Date() }),
-    endAt: faker.date.future({ years: 0.5, refDate: new Date() }),
-    status: faker.helpers.arrayElement(statuses),
-    owner: faker.helpers.arrayElement(users),
-  }));
+const generateFeatures = (count: number) => {
+  return Array.from({ length: count })
+    .fill(null)
+    .map(() => ({
+      id: faker.string.uuid(),
+      name: capitalize(faker.company.buzzPhrase()),
+      startAt: faker.date.past({ years: 0.5, refDate: new Date() }),
+      endAt: faker.date.future({ years: 0.5, refDate: new Date() }),
+      status: faker.helpers.arrayElement(statuses),
+      owner: faker.helpers.arrayElement(users),
+    }));
+};
 
 const ProblemSolverList = () => {
-  const [features, setFeatures] = useState(ProblemSolverListFeatures);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Generate 6 features once and keep them
+  const [allFeatures, setAllFeatures] = useState(() => generateFeatures(8));
+
+  // Determine how many features to show based on window width
+  const visibleFeatureCount = useMemo(() => {
+    if (!isMounted || windowWidth === 0) {
+      // During SSR or initial render, show 4
+      return 4;
+    }
+    // On client, show 6 if window is larger than 1280px, otherwise 4
+    return windowWidth > 1280 ? (windowWidth > 1536 ? 8 : 6) : 4;
+  }, [windowWidth, isMounted]);
+
+  // Get the visible features (first N items)
+  const features = useMemo(() => {
+    return allFeatures.slice(0, visibleFeatureCount);
+  }, [allFeatures, visibleFeatureCount]);
 
   const handleDragEnd = (event: DragEndEvent) => {
     const { active, over } = event;
@@ -57,8 +93,8 @@ const ProblemSolverList = () => {
       return;
     }
 
-    setFeatures(
-      features.map((feature) => {
+    setAllFeatures(
+      allFeatures.map((feature) => {
         if (feature.id === active.id) {
           return { ...feature, status };
         }
@@ -67,6 +103,14 @@ const ProblemSolverList = () => {
       })
     );
   };
+
+  if (!isMounted) {
+    return (
+      <div className="flex size-full min-h-40 items-center justify-center rounded-md border bg-secondary">
+        <div className="text-muted-foreground text-sm">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <ListProvider onDragEnd={handleDragEnd}>
