@@ -6,6 +6,7 @@ import { RetroGridComponent } from "./card-components/RetroGrid";
 import BentoBoxCards from "./BentoBoxCards";
 import WorkExpTable from "./Table";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { Highlighter } from "@/components/ui/highlighter";
 import Link from "next/link";
 
 const About = () => {
@@ -45,7 +46,15 @@ const About = () => {
           delay={0.6}
           className="flex gap-3 text-2xl font-semibold p-4 text-center"
         >
-          Chronological Work Experience
+          <Highlighter
+            action="underline"
+            color="#87CEFA"
+            animationDuration={1750}
+            isView={true}
+            iterations={3}
+          >
+            Chronological Work Experience
+          </Highlighter>{" "}
         </BlurReveal>
       </div>
       <WorkExpTable />

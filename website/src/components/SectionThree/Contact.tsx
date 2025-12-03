@@ -20,9 +20,8 @@ const Contact = () => {
         </div>
       </div>
       <div className="relative h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
-        <Meteors />
         <ContactTerminal />
-        <Meteors />
+        <Meteors number={30} />
       </div>
     </>
   );

@@ -38,3 +38,5 @@ This condition will stop the animation when index reaches the last item. Removed
 - When using Faker (Library to generate mock data), you want to use .seed to generate the same data on the server or client, otherwise hydration error
 
 - @dnd-kit generates different aria-describedby IDs on the server vs client also causing a hydration error, fixed by adding a isMounted state that starts false then runs true after the useEffect sets it to true. Finally, a loading placeholder runs during SSR, ensuring the IDs are rendered only on the client
+
+- The meteors animation component uses window.innerWidth to calculate the window where the animation should happen. However, when the window was resized, meteor positions weren't recalculated. Added a resize event listener to allow for re-calculation during resizing and a cleanup function for unmount
