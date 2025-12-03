@@ -1,7 +1,7 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import type { ColumnDef } from "@/components/ui/kibo-ui/table";
+import type { ColumnDef } from "@/components/kibo-ui/table";
 import {
   TableBody,
   TableCell,
@@ -11,7 +11,7 @@ import {
   TableHeaderGroup,
   TableProvider,
   TableRow,
-} from "@/components/ui/kibo-ui/table";
+} from "@/components/kibo-ui/table";
 
 const items = [
   {
@@ -103,7 +103,7 @@ const exampleFeatures = items.map((item, index) => ({
   product: exampleProducts[index],
 }));
 
-const Example = () => {
+const WorkExpTable = () => {
   const columns: ColumnDef<(typeof exampleFeatures)[number]>[] = [
     {
       accessorKey: "name",
@@ -134,30 +134,44 @@ const Example = () => {
       header: ({ column }) => (
         <TableColumnHeader column={column} title="Start At" />
       ),
-      cell: ({ row }) => (
-        <>
-          {typeof row.original.startAt === Date
-            ? new Intl.DateTimeFormat("en-US", {
-                dateStyle: "medium",
-              }).format(row.original.startAt)
-            : row.original.startAt}
-        </>
-      ),
+      cell: ({ row }) => {
+        const startAt = row.original.startAt;
+        if (
+          typeof startAt === "string" &&
+          startAt !== "N/A" &&
+          startAt !== "Present"
+        ) {
+          const date = new Date(startAt);
+          if (!isNaN(date.getTime())) {
+            return new Intl.DateTimeFormat("en-US", {
+              dateStyle: "medium",
+            }).format(date);
+          }
+        }
+        return startAt;
+      },
     },
     {
       accessorKey: "endAt",
       header: ({ column }) => (
         <TableColumnHeader column={column} title="End At" />
       ),
-      cell: ({ row }) => (
-        <>
-          {typeof row.original.endAt === Date
-            ? new Intl.DateTimeFormat("en-US", {
-                dateStyle: "medium",
-              }).format(row.original.endAt)
-            : row.original.endAt}
-        </>
-      ),
+      cell: ({ row }) => {
+        const endAt = row.original.endAt;
+        if (
+          typeof endAt === "string" &&
+          endAt !== "N/A" &&
+          endAt !== "Present"
+        ) {
+          const date = new Date(endAt);
+          if (!isNaN(date.getTime())) {
+            return new Intl.DateTimeFormat("en-US", {
+              dateStyle: "medium",
+            }).format(date);
+          }
+        }
+        return endAt;
+      },
     },
   ];
 
@@ -181,4 +195,4 @@ const Example = () => {
   );
 };
 
-export default Example;
+export default WorkExpTable;

@@ -63,7 +63,7 @@ const HealthAndFitnessProject = () => {
     <ExpandableCard
       title="Health and Fitness Management Tool"
       src="/fitness.png"
-      description="Next.js/TypeScript, PrismaORM, shad-cn/ui, Tanstack Table"
+      description="Built with Next.js, PrismaORM, shad-cn/ui, Tanstack Table"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
       <Link href="https://github.com/henrylee746/COMP3005FP">

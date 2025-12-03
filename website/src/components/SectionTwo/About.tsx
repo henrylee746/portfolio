@@ -3,8 +3,8 @@ import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { BlurReveal } from "@/components/ui/blur-reveal";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { RetroGridComponent } from "./card-components/RetroGrid";
-import Example from "./Table";
 import BentoBoxCards from "./BentoBoxCards";
+import WorkExpTable from "./Table";
 
 const About = () => {
   return (
@@ -39,8 +39,14 @@ const About = () => {
           🏫 Education: Honours Bachelor of Computer Science @ Carleton
           University (Sep. 2022 - June 2027 expt.)
         </BlurReveal>
+        <BlurReveal
+          delay={0.6}
+          className="flex gap-3 text-2xl font-semibold p-4 text-center"
+        >
+          Chronological Work Experience
+        </BlurReveal>
       </div>
-      <Example />
+      <WorkExpTable />
       <BentoBoxCards />
       <RetroGridComponent />
     </>
