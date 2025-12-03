@@ -7,7 +7,7 @@ import { FaPuzzlePiece } from "react-icons/fa";
 /*Components*/
 import { IconCloudTechnologies } from "./card-components/Icons";
 import { ToolsList } from "./card-components/AnimatedList";
-import { AnimatedBeamMultipleOutputDemo } from "./card-components/AnimatedBeam";
+import ProblemSolverList from "./card-components/List";
 const features = [
   {
     Icon: FaBrain,
@@ -36,9 +36,7 @@ const features = [
       "I enjoy breaking down complex challenges into manageable solutions, whether it's debugging a tricky bug or architecting a scalable system.",
     href: "/",
     cta: "Learn more",
-    background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute mt-16 md:mt-4 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />
-    ),
+    background: <ProblemSolverList />,
     className: "flex-1",
   },
 ];
