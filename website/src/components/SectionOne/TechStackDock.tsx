@@ -23,13 +23,17 @@ import { BiLogoPostgresql } from "react-icons/bi";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  react: (props: IconProps) => <FaReact {...props} />,
+  react: (props: IconProps) => <FaReact {...props} fill="#61DAFB" />,
   nextjs: (props: IconProps) => <RiNextjsFill {...props} />,
-  typescript: (props: IconProps) => <SiTypescript {...props} />,
-  tailwindcss: (props: IconProps) => <RiTailwindCssFill {...props} />,
-  nodejs: (props: IconProps) => <FaNode {...props} />,
-  graphql: (props: IconProps) => <GrGraphQl {...props} />,
-  postgresql: (props: IconProps) => <BiLogoPostgresql {...props} />,
+  typescript: (props: IconProps) => <SiTypescript {...props} fill="#3178C6" />,
+  tailwindcss: (props: IconProps) => (
+    <RiTailwindCssFill {...props} fill="#06B6D4" />
+  ),
+  nodejs: (props: IconProps) => <FaNode {...props} fill="#5FA04E" />,
+  graphql: (props: IconProps) => <GrGraphQl {...props} fill="#E10098" />,
+  postgresql: (props: IconProps) => (
+    <BiLogoPostgresql {...props} fill="#4169E1" />
+  ),
 };
 
 const DATA = {

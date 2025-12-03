@@ -10,7 +10,7 @@ const Intro = () => {
   return (
     <div className="relative overflow-hidden rounded-lg shadow-sm">
       <BorderBeam lightColor="#FF2056" lightWidth={350} duration={8} />
-      <div className="h-full w-screen p-8 md:px-10 lg:px-16 flex gap-4 justify-between items-center">
+      <div className="h-full w-screen p-8 md:px-8 lg:px-10 flex gap-4 justify-between items-center">
         <div>
           <FadeUpWord
             as="h1"

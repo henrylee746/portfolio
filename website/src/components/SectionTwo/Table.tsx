@@ -29,7 +29,7 @@ const items = [
     title: "Tech Lead Developer",
     image:
       "https://media.licdn.com/dms/image/v2/C4D0BAQEJrZyBtVLe1Q/company-logo_200_200/company-logo_200_200/0/1630461528316/cublueprint_logo?e=1766016000&v=beta&t=2HOlmq30x0ufeHOqcECStV7foLhOZ4yVCrXdwEHyULw",
-    body: `React/TypeScript, Next.js, Strapi, BetterAuth.js, GraphQL, GitHub Projects`,
+    body: `Next.js/TypeScript, Strapi, BetterAuth.js, GraphQL, GitHub Projects`,
     startAt: "2025-10-01",
     endAt: "Present",
   },

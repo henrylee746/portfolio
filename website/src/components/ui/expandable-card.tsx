@@ -156,7 +156,7 @@ export function ExpandableCard({
         layoutId={`card-${title}-${id}`}
         onClick={() => setActive(true)}
         className={cn(
-          "flex cursor-pointer flex-col items-center justify-between rounded-2xl border border-gray-200/70 bg-zinc-50 p-3 shadow-sm dark:border-zinc-900 dark:bg-zinc-950 dark:shadow-none",
+          "flex cursor-pointer flex-col items-center justify-end rounded-2xl border border-gray-200/70 bg-zinc-50 p-3 shadow-sm dark:border-zinc-900 dark:bg-zinc-950 dark:shadow-none",
           className
         )}
       >
@@ -165,7 +165,7 @@ export function ExpandableCard({
             <img
               src={src}
               alt={title}
-              className="h-72 w-full rounded-lg object-contain"
+              className="h-72 w-full rounded-lg object-cover"
             />
           </motion.div>
           <div className="flex items-center justify-between">

@@ -17,7 +17,6 @@ export default function Home() {
             <HyperText className="max-w-lg text-lg leading-8 text-zinc-600 dark:text-zinc-400">
               I enjoy working with:
             </HyperText>
-
             <TechStackDock />
           </div>
         </div>
