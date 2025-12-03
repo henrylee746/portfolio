@@ -5,7 +5,7 @@ export default function TechStackDock() {
     {
       src: "https://cdn.badtz-ui.com/images/components/dock/react-logo.webp",
       name: "React",
-      href: "#react",
+      href: "https://react.dev/",
     },
     {
       src: "https://vectorseek.com/wp-content/uploads/2023/09/Nextjs-Logo-Vector.svg-.png",

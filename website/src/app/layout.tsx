@@ -26,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark overflow-x-hidden
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark overflow-x-clip
+
 `}
       >
+        {/*Overflow content is not visible when using clip*/}
         {children}
         <Particles variant="snow" />
       </body>
