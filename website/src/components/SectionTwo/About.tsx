@@ -64,7 +64,7 @@ const About = () => {
       <WorkExpTable />
       <Link href="https://icy-morning-122.linkyhost.com">
         <ShinyButton className="my-6">
-          <span className="font-semibold">Click to see Resume</span>
+          <span className="font-semibold">Resume</span>
         </ShinyButton>
       </Link>
       <Separator orientation="horizontal" />
