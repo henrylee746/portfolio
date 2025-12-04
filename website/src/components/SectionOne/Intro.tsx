@@ -38,7 +38,7 @@ const Intro = () => {
                 GitHub <FaGithub />
               </ShimmerButton>
             </Link>
-            <Link href="https://bitter-sunset-340.linkyhost.com/">
+            <Link href="https://icy-morning-122.linkyhost.com">
               <ShimmerButton className="shadow-2xl flex gap-1.5 items-center">
                 Resume <IoIosPaper />
               </ShimmerButton>

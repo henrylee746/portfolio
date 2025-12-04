@@ -62,7 +62,7 @@ const About = () => {
         </BlurReveal>
       </div>
       <WorkExpTable />
-      <Link href="https://bitter-sunset-340.linkyhost.com">
+      <Link href="https://icy-morning-122.linkyhost.com">
         <ShinyButton className="my-6">
           <span className="font-semibold">Click to see Resume</span>
         </ShinyButton>
