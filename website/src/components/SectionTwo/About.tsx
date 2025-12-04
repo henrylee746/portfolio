@@ -48,7 +48,7 @@ const About = () => {
 
         <BlurReveal
           delay={0.6}
-          className="flex gap-3 text-2xl font-semibold p-4 text-center"
+          className="flex gap-3 mb-6 text-2xl font-semibold p-4 text-center"
         >
           <Highlighter
             action="underline"
