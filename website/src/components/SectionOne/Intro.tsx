@@ -1,7 +1,7 @@
 import { BorderBeam } from "@/components/ui/border-beam";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
-import { HyperText } from "@/components/ui/hyper-text";
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import TechStackDock from "@/components/SectionOne/TechStackDock";
 
 import Link from "next/link";
@@ -26,7 +26,7 @@ const Intro = () => {
             </FadeUpWord>
             <FadeUpWord
               as="h2"
-              className="max-w-3xl text-xl sm:text-xl md:text-2xl lg:text-3xl font-medium leading-5 tracking-tight text-black dark:text-zinc-50"
+              className="max-w-3xl text-xl sm:text-xl md:text-3xl lg:text-4xl font-medium leading-5 tracking-tight text-black dark:text-zinc-50"
               delay={0.1}
             >
               CS @ Carleton & Full-Stack Development
@@ -55,9 +55,14 @@ const Intro = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-2">
-        <HyperText className="max-w-lg text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+        <AnimatedGradientText
+          speed={1}
+          colorFrom="#91a3b0"
+          colorTo="#4e4eff"
+          className="max-w-lg text-lg leading-8 font-bold"
+        >
           I enjoy working with:
-        </HyperText>
+        </AnimatedGradientText>
         <TechStackDock />
       </div>
     </>

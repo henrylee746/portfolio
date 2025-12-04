@@ -62,7 +62,7 @@ const ProblemSolverList = () => {
     };
   }, []);
 
-  // Generate 6 features once and keep them
+  // Generate 8 features once and keep them
   const [allFeatures, setAllFeatures] = useState(() => generateFeatures(8));
 
   // Determine how many features to show based on window width
@@ -71,7 +71,6 @@ const ProblemSolverList = () => {
       // During SSR or initial render, show 4
       return 4;
     }
-    // On client, show 6 if window is larger than 1280px, otherwise 4
     return windowWidth > 1280 ? (windowWidth > 1536 ? 8 : 6) : 4;
   }, [windowWidth, isMounted]);
 

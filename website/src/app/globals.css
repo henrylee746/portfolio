@@ -132,7 +132,11 @@
   0%, 100% {
     transform: translate(-50%, -50%) scale(1);}
   50% {
-    transform: translate(-50%, -50%) scale(0.9);}}}
+    transform: translate(-50%, -50%) scale(0.9);}}
+  --animate-gradient: gradient 8s linear infinite;
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;}}}
 
 :root {
   --radius: 0.625rem;
