@@ -23,6 +23,8 @@ const slugs = [
   "vitest",
   "strapi",
   "tanstack",
+  "strapi",
+  "zod",
 ];
 
 export function IconCloudTechnologies() {
