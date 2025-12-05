@@ -30,7 +30,6 @@ export default function RootLayout({
 
 `}
       >
-        {/*Overflow content is not visible when using clip*/}
         {children}
         <Particles variant="snow" />
       </body>

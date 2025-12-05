@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export function NameTextFlip() {
   return (
     <div>
-      <motion.div className="relative py-6 flex flex-col items-start sm:flex-row sm:items-center sm:gap-4 gap-3 text-center">
+      <motion.div className="relative py-6 flex flex-col sm:flex-row items-center sm:gap-4 gap-3 text-center">
         <LayoutTextFlip
           text="This is "
           words={[

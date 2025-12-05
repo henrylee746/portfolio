@@ -19,7 +19,7 @@ const Contact = () => {
           </FadeUpWord>
         </div>
       </div>
-      <div className="relative h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
+      <div className="relative p-4 h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
         <ContactTerminal />
         <Meteors number={30} />
       </div>
