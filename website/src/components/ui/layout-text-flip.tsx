@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const LayoutTextFlip = ({
   text = "Build Amazing",
-  words = ["Landing Pages", "Component Blocks", "Page Sections", "3D Shaders"],
+  words,
   duration = 3000,
 }: {
   text: string;

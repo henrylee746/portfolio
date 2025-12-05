@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState, useRef } from "react";
 import {
   initParticlesEngine,
   Particles as TSParticles,
 } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-
+import { usePageInView } from "motion/react";
 import { cn } from "@/lib/utils";
 
 type ParticleVariant = "default" | "snow" | "stars";

@@ -60,7 +60,8 @@ export const Highlight = ({
 }) => {
   /*Added a ref to track the highlighted component*/
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: "all" });
+  /*Run only the first time in-view when the element is >= 70% in the viewport*/
 
   return (
     <motion.span

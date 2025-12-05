@@ -1,7 +1,6 @@
 import { BorderBeam } from "@/components/ui/border-beam";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
-import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 import TechStackDock from "@/components/SectionOne/TechStackDock";
 import { NameTextFlip } from "@/components/SectionOne/NameTextFlip";
 
@@ -49,14 +48,8 @@ const Intro = () => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-2">
-        <AnimatedGradientText
-          speed={1}
-          colorFrom="#91a3b0"
-          colorTo="#4e4eff"
-          className="max-w-lg text-lg leading-8 font-bold"
-        >
-          I enjoy working with:
-        </AnimatedGradientText>
+        <span className="max-w-lg text-lg leading-8 font-bold"></span>
+        I enjoy working with:
         <TechStackDock />
       </div>
     </>
