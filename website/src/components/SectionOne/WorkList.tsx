@@ -16,13 +16,13 @@ const items = [
     name: "incubator13",
     title: "Coding Workshop Leader Intern",
     image: "/incubator.jpg",
-    body: `Engaged with incoming students, teaching programming fundamentals involving Java, HTML, JavaScript, and Python`,
+    body: `Henry had great engagement with incoming students, teaching programming fundamentals and digital literacy. Well done!`,
   },
   {
     name: "Carleton Blueprint",
     title: "Tech Lead Developer",
     image: "/cublueprint.jpg",
-    body: `Well done to Henry for being able to learn a whole new CMS in short time for the purpose of this project (Strapi)👏`,
+    body: `Henry is an excellent developer, what impresses me most is his initiative and communication skills. He does a great job at evaluating technologies and and leading his teams.`,
   },
   {
     name: "House of Commons of Canada",

@@ -81,7 +81,7 @@ export default function TechStackDock() {
   return (
     <div className="flex items-center justify-center">
       <TooltipProvider>
-        <Dock direction="middle" iconSize={40}>
+        <Dock direction="middle">
           {DATA.frontend.map((item) => (
             <DockIcon key={item.name}>
               <Tooltip>
