@@ -2,6 +2,7 @@ import { ContactTerminal } from "./Terminal";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { Meteors } from "@/components/ui/meteors";
+import { isMobile } from "react-device-detect";
 
 const Contact = () => {
   return (
@@ -21,7 +22,7 @@ const Contact = () => {
       </div>
       <div className="relative p-4 h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
         <ContactTerminal />
-        <Meteors number={30} />
+        {!isMobile && <Meteors number={30} />}
       </div>
     </>
   );
