@@ -26,8 +26,6 @@ export function ResumeLinkPreview() {
           <Highlight className="text-black dark:text-white">
             <LinkPreview
               url="https://rough-butterfly-677.linkyhost.com"
-              imageSrc="/resume.png"
-              isStatic={true}
               className="font-bold"
             >
               My Resume Here
