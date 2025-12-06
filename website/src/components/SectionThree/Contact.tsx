@@ -8,7 +8,12 @@ const Contact = () => {
   return (
     <>
       <div className="relative overflow-hidden rounded-lg shadow-sm m-8">
-        <BorderBeam lightColor="#008000" lightWidth={350} duration={8} />
+        <BorderBeam
+          lightColor="#008000"
+          lightWidth={350}
+          duration={8}
+          borderWidth={2}
+        />
         <div className="h-full w-screen mx-4 p-8 md:px-8 lg:px-10 flex gap-4 justify-between items-center">
           <FadeUpWord
             as="h1"

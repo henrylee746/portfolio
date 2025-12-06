@@ -19,9 +19,15 @@ import { IoDocumentText } from "react-icons/io5";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  github: (props: IconProps) => <FiGithub className="size-6 sm:size-8" />,
-  resume: (props: IconProps) => <IoDocumentText className="size-6 sm:size-8" />,
-  linkedin: (props: IconProps) => <FaLinkedinIn className="size-6 sm:size-8" />,
+  github: (props: IconProps) => (
+    <FiGithub className="size-6 sm:size-7 xl:size-8" />
+  ),
+  resume: (props: IconProps) => (
+    <IoDocumentText className="size-6 sm:size-7 xl:size-8" />
+  ),
+  linkedin: (props: IconProps) => (
+    <FaLinkedinIn className="size-6 sm:size-7 xl:size-8" />
+  ),
 };
 
 const DATA = [
@@ -48,7 +54,7 @@ export default function SocialLinksDock() {
       <TooltipProvider>
         <Dock
           direction="middle"
-          className="h-[58px] sm:h-[75px] gap-4 md:gap-6 px-4"
+          className="h-[58px] sm:h-[60px] xl:h-[75px] gap-4 md:gap-6 px-4"
           disableMagnification={true}
         >
           {DATA.map((item) => (
