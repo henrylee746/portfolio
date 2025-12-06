@@ -39,7 +39,7 @@ const DATA = [
   {
     icon: Icons.resume,
     name: "Resume",
-    href: "https://icy-morning-122.linkyhost.com",
+    href: "https://rough-butterfly-677.linkyhost.com",
   },
   {
     icon: Icons.linkedin,

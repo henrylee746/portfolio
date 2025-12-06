@@ -25,7 +25,7 @@ export function ResumeLinkPreview() {
           Or Visit{" "}
           <Highlight className="text-black dark:text-white">
             <LinkPreview
-              url="https://icy-morning-122.linkyhost.com"
+              url="https://rough-butterfly-677.linkyhost.com"
               className="font-bold"
             >
               My Resume Here
