@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
@@ -81,11 +82,13 @@ export function ExpandableCard({
               {...props}
             >
               <motion.div layoutId={`image-${title}-${id}`}>
-                <div className="relative before:absolute before:inset-x-0 before:bottom-[-1px] before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-zinc-50 dark:before:from-zinc-950">
-                  <img
+                <div className="relative h-80 w-full before:absolute before:inset-x-0 before:bottom-[-1px] before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-zinc-50 dark:before:from-zinc-950">
+                  <Image
                     src={src}
                     alt={title}
-                    className="h-80 w-full object-cover object-center"
+                    fill
+                    sizes="(max-width: 850px) 100vw, 850px"
+                    className="object-cover object-center"
                   />
                 </div>
               </motion.div>
@@ -161,11 +164,16 @@ export function ExpandableCard({
         )}
       >
         <div className="flex flex-col gap-4">
-          <motion.div layoutId={`image-${title}-${id}`}>
-            <img
+          <motion.div
+            layoutId={`image-${title}-${id}`}
+            className="relative h-72 w-full"
+          >
+            <Image
               src={src}
               alt={title}
-              className="h-72 w-full rounded-lg object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 400px"
+              className="rounded-lg object-cover"
             />
           </motion.div>
           <div className="flex items-center justify-between">

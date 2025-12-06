@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 
 const items = [
@@ -43,10 +44,12 @@ function TestimonialCard({ item }: { item: (typeof items)[number] }) {
       </div>
       <div className="mt-auto flex items-center gap-4">
         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-          <img
+          <Image
             src={item.image}
             alt={item.name}
-            className="h-full w-full object-cover"
+            fill
+            sizes="40px"
+            className="object-cover"
           />
         </div>
         <div className="flex flex-col">
