@@ -4,7 +4,7 @@ import { Marquee } from "@/components/ui/marquee";
 const items = [
   {
     name: "Ericsson Canada",
-    title: "Software Developer Intern",
+    title: "Line Manager",
     image: "/ericsson.jpg",
     body: `
       	Henry has been excellent.
@@ -15,19 +15,19 @@ const items = [
   },
   {
     name: "incubator13",
-    title: "Coding Workshop Leader Intern",
+    title: "Program Lead",
     image: "/incubator.jpg",
     body: `Henry had great engagement with incoming students, teaching programming fundamentals and digital literacy. Well done!`,
   },
   {
     name: "Carleton Blueprint",
-    title: "Tech Lead Developer",
+    title: "Vice President of Projects",
     image: "/cublueprint.jpg",
     body: `Henry is an excellent developer, what impresses me most is his initiative and communication skills. He does a great job at evaluating technologies and and leading his teams.`,
   },
   {
     name: "House of Commons of Canada",
-    title: "Student Developer Co-Op",
+    title: "Product Delivery Manager",
     image: "/hoc.jpg",
     body: `Overall, 
     Henry has demonstrated that he can be

@@ -21,7 +21,7 @@ const ProjExpSection = () => {
           className="max-w-xl text-2xl sm:text-3xl lg:text-4xl font-medium leading-10 tracking-tight text-black dark:text-zinc-50 flex justify-center"
           delay={0.3}
         >
-          Work Testimonials
+          Testimonials
         </FadeUpWord>
         <WorkList />
       </div>

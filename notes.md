@@ -42,3 +42,13 @@ This condition will stop the animation when index reaches the last item. Removed
 - The meteors animation component uses window.innerWidth to calculate the window where the animation should happen. However, when the window was resized, meteor positions weren't recalculated. Added a resize event listener to allow for re-calculation during resizing and a cleanup function for unmount
 
 - Modified hero-highlighter to use useInView (https://motion.dev/docs/react-use-in-view) from motion/react to detect when the text "My Resume Here" enters the viewport. A ref using useRef tracks the component
+
+Performance:
+
+- Added will-change (mostly will-change-transform) to continuously animating components impacting performance. This is normally used sparingly and should be last resort
+
+- Added next/image rather than vanilla <img> to add lazy loading & reduce file size. Also reserves the space before render
+
+- Implemented isMobile functionality on meteors using react-device-detect so meteors are disabled on mobile devices
+
+- Added next/dynamic to lazy load components that are under-the-fold (not visible on initial load, only loads when user scrolls down)

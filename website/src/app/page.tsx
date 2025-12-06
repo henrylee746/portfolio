@@ -1,7 +1,12 @@
-import About from "@/components/SectionTwo/About";
-import Intro from "@/components/SectionOne/Intro";
-import Contact from "@/components/SectionThree/Contact";
-import ProjExpSection from "@/components/SectionOne/ProjExpSection";
+import dynamic from "next/dynamic";
+import Intro from "@/components/SectionOne/Intro"; // Keep eager - above the fold!
+
+// Lazy load below-the-fold sections
+const ProjExpSection = dynamic(
+  () => import("@/components/SectionOne/ProjExpSection")
+);
+const About = dynamic(() => import("@/components/SectionTwo/About"));
+const Contact = dynamic(() => import("@/components/SectionThree/Contact"));
 
 export default function Home() {
   return (
