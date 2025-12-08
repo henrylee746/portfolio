@@ -9,7 +9,7 @@ const ProjExpSection = () => {
         <FadeUpWord
           as="h2"
           className="max-w-xl text-3xl sm:text-4xl  font-medium leading-10 tracking-tight text-black dark:text-zinc-50 flex justify-center"
-          delay={0.3}
+          delay={0.6}
         >
           Work Testimonials
         </FadeUpWord>

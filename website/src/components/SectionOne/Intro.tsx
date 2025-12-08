@@ -3,6 +3,7 @@ import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { NameTextFlip } from "@/components/SectionOne/NameTextFlip";
 import SocialLinksDock from "./SocialLinksDock";
 import { HeroSection } from "./HeroSection";
+import { ToggleTheme } from "@/components/ui/toggle-theme";
 
 const Intro = () => {
   return (
@@ -25,7 +26,10 @@ const Intro = () => {
               CS @ Carleton | Full-Stack Development
             </FadeUpWord>{" "}
           </div>
-          <SocialLinksDock />
+          <div className="flex gap-2 items-center">
+            <SocialLinksDock />
+            <ToggleTheme animationType="shrink-grow" />
+          </div>
         </div>
       </div>
       <HeroSection />

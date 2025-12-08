@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import React, { CSSProperties, useEffect, useRef } from "react"
-import { motion } from "motion/react"
+import React, { CSSProperties, useEffect, useRef } from "react";
+import { motion } from "motion/react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface BorderBeamProps {
-  lightWidth?: number
-  duration?: number
-  lightColor?: string
-  borderWidth?: number
-  className?: string
-  [key: string]: unknown
+  lightWidth?: number;
+  duration?: number;
+  lightColor?: string;
+  borderWidth?: number;
+  className?: string;
+  [key: string]: unknown;
 }
 
 export function BorderBeam({
@@ -22,26 +22,26 @@ export function BorderBeam({
   className,
   ...props
 }: BorderBeamProps) {
-  const pathRef = useRef<HTMLDivElement>(null)
+  const pathRef = useRef<HTMLDivElement>(null);
 
   const updatePath = () => {
     if (pathRef.current) {
-      const div = pathRef.current
+      const div = pathRef.current;
       div.style.setProperty(
         "--path",
         `path("M 0 0 H ${div.offsetWidth} V ${div.offsetHeight} H 0 V 0")`
-      )
+      );
     }
-  }
+  };
 
   useEffect(() => {
-    updatePath()
-    window.addEventListener("resize", updatePath)
+    updatePath();
+    window.addEventListener("resize", updatePath);
 
     return () => {
-      window.removeEventListener("resize", updatePath)
-    }
-  }, [])
+      window.removeEventListener("resize", updatePath);
+    };
+  }, []);
 
   return (
     <div
@@ -53,7 +53,7 @@ export function BorderBeam({
       }
       ref={pathRef}
       className={cn(
-        `absolute z-0 h-full w-full rounded-[inherit]`,
+        `absolute pointer-events-none z-0 h-full w-full rounded-[inherit]`,
         `after:absolute after:inset-[var(--border-width)] after:rounded-[inherit] after:content-['']`,
         "border-[length:var(--border-width)] ![mask-clip:padding-box,border-box]",
         "![mask-composite:intersect] [mask:linear-gradient(transparent,transparent),linear-gradient(red,red)]",
@@ -82,5 +82,5 @@ export function BorderBeam({
         }}
       />
     </div>
-  )
+  );
 }

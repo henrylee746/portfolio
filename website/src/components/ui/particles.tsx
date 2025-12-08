@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useId, useState, useRef } from "react";
+import { useEffect, useId, useState } from "react";
 import {
   initParticlesEngine,
   Particles as TSParticles,
 } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 type ParticleVariant = "default" | "snow" | "stars";
 
@@ -26,23 +27,26 @@ interface ParticlesProps {
   customOptions?: Record<string, unknown>;
 }
 
-const variantStyles: Record<
+// Base variant configurations (without theme-dependent colors)
+const getVariantStyles = (
+  isDark: boolean
+): Record<
   ParticleVariant,
   ParticleStyle & { options?: Record<string, unknown> }
-> = {
+> => ({
   default: {
     count: 100,
     size: 2,
     speed: 1.5,
     opacity: 0.8,
-    color: "#FFFFFF",
+    color: isDark ? "#FFFFFF" : "#000000",
   },
   snow: {
     count: 100,
     size: 1.2,
     speed: 1,
     opacity: 0.6,
-    color: "#FFFFFF",
+    color: isDark ? "#FFFFFF" : "#000000",
     options: {
       interactivity: {
         detectOn: "canvas",
@@ -77,7 +81,7 @@ const variantStyles: Record<
     size: 1.5,
     speed: 0,
     opacity: 0.8,
-    color: "#FFFFFF",
+    color: isDark ? "#FFFFFF" : "#000000",
     options: {
       interactivity: {
         detectOn: "canvas",
@@ -103,7 +107,7 @@ const variantStyles: Record<
         },
         shadow: {
           enable: true,
-          color: "#FFFFFF",
+          color: isDark ? "#FFFFFF" : "#000000",
           blur: 5,
           offset: {
             x: 0,
@@ -112,14 +116,14 @@ const variantStyles: Record<
         },
         glow: {
           enable: true,
-          color: "#FFFFFF",
+          color: isDark ? "#FFFFFF" : "#000000",
           distance: 10,
           size: 2,
         },
       },
     },
   },
-};
+});
 
 export function Particles({
   className,
@@ -129,6 +133,12 @@ export function Particles({
   customOptions = {},
 }: ParticlesProps) {
   const [isInitialized, setIsInitialized] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -140,6 +150,15 @@ export function Particles({
 
   const id = useId();
 
+  // Don't render until mounted to avoid hydration mismatch
+  if (!mounted || !isInitialized) {
+    return null;
+  }
+
+  // Determine if dark mode (default to dark before mount to avoid flash)
+  const isDark = mounted ? resolvedTheme === "dark" : true;
+  console.log(isDark);
+  const variantStyles = getVariantStyles(isDark);
   const baseStyle = variantStyles[variant];
   const finalStyle = { ...baseStyle, ...style };
 
@@ -237,12 +256,11 @@ export function Particles({
   const finalOptions = deepMerge(mergedOptions, customOptions);
 
   return (
-    isInitialized && (
-      <TSParticles
-        id={id}
-        options={finalOptions}
-        className={cn("pointer-events-none absolute inset-0", className)}
-      />
-    )
+    <TSParticles
+      key={resolvedTheme} // Force re-render when theme changes
+      id={id}
+      options={finalOptions}
+      className={cn("pointer-events-none absolute inset-0", className)}
+    />
   );
 }

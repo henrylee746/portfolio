@@ -18,10 +18,11 @@ export const HeroSection = () => {
 
         <div className="text-center">
           <TextAnimate
-            className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl mb-6"
+            className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl  mb-6"
             animation="blurIn"
             as="h1"
             once={true}
+            delay={0.5}
           >
             Hi, I'm Henry👋
           </TextAnimate>

@@ -39,7 +39,7 @@ const items = [
 function TestimonialCard({ item }: { item: (typeof items)[number] }) {
   return (
     <div className="relative flex h-full w-[20rem] flex-col items-start justify-between rounded-xl border border-neutral-200 bg-white p-4 shadow-sm transition-colors hover:bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-900">
-      <div className="mb-4 text-sm text-neutral-500 dark:text-neutral-400">
+      <div className="mb-4 text-sm text-neutral-900 dark:text-neutral-300">
         {item.body}
       </div>
       <div className="mt-auto flex items-center gap-4">

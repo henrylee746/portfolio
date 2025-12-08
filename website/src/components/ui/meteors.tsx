@@ -15,7 +15,7 @@ interface MeteorsProps {
 }
 
 export const Meteors = ({
-  number = 20,
+  number = 10,
   minDelay = 0.2,
   maxDelay = 1.2,
   minDuration = 2,
@@ -64,7 +64,7 @@ export const Meteors = ({
           )}
         >
           {/* Meteor Tail */}
-          <div className="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-zinc-500 to-transparent" />
+          <div className="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-black to-transparent dark:from-zinc-500 to-transparent" />
         </span>
       ))}
     </>
