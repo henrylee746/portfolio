@@ -1,7 +1,11 @@
+"use client";
+
 import { ExpandableCard } from "@/components/ui/expandable-card";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 export function TypographyBlockquote({ content }: { content: string }) {
   return (
@@ -9,11 +13,11 @@ export function TypographyBlockquote({ content }: { content: string }) {
   );
 }
 
-const TMDProject = () => {
+const TMDProject = ({ isDark }: { isDark: boolean }) => {
   return (
     <ExpandableCard
       title="Team Metrics Dashboard"
-      src="/tmd.png"
+      src={isDark ? "/tmdDark.png" : "/tmdLight.png"}
       description="React/TypeScript, Supabase, Node.js/Express, TailwindCSS, shadcnUI"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
@@ -93,12 +97,23 @@ const HealthAndFitnessProject = () => {
 };
 
 export function ProjectCards() {
+  const [mounted, isMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    isMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const isDark = resolvedTheme === "dark";
+
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4
     "
     >
-      <TMDProject />
+      <TMDProject isDark={isDark} />
       <HealthAndFitnessProject />
     </div>
   );
