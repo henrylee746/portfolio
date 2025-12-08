@@ -18,6 +18,7 @@ export const HeroSection = () => {
             className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl mb-6"
             animation="blurIn"
             as="h1"
+            once={true}
           >
             Hi, I'm Henry👋
           </TextAnimate>
@@ -27,6 +28,7 @@ export const HeroSection = () => {
             as="p"
             animation="blurIn"
             duration={0.5}
+            once={true}
           >
             I enjoy working with:
           </TextAnimate>
