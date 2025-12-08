@@ -1,4 +1,5 @@
 import TechStackDock from "@/components/SectionOne/TechStackDock";
+import { TextAnimate } from "@/components/ui/text-animate";
 
 export const HeroSection = () => {
   return (
@@ -13,12 +14,22 @@ export const HeroSection = () => {
         </div>
 
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+          <TextAnimate
+            className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl mb-6"
+            animation="blurIn"
+            as="h1"
+          >
             Hi, I'm Henry👋
-          </h1>
-          <p className="text-base sm:text-2xl text-slate-600 dark:text-slate-300 max-w-xl md:max-w-3xl mx-auto mb-4">
+          </TextAnimate>
+
+          <TextAnimate
+            className="text-base sm:text-2xl text-slate-600 dark:text-slate-300 max-w-xl md:max-w-3xl mx-auto mb-4"
+            as="p"
+            animation="blurIn"
+            duration={0.5}
+          >
             I enjoy working with:
-          </p>
+          </TextAnimate>
           <TechStackDock />
         </div>
       </div>
