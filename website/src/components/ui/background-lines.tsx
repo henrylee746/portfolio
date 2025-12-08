@@ -15,7 +15,7 @@ export const BackgroundLines = ({
   };
 }) => {
   return (
-    <div className={cn("w-full bg-white dark:bg-black", className)}>
+    <div className={cn("w-full", className)}>
       <SVG svgOptions={svgOptions} />
       {children}
     </div>
@@ -93,7 +93,7 @@ const SVG = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="absolute inset-0 w-full h-full top-[-100px]"
+      className="absolute inset-0 w-full h-full pointer-events-none top-[-100px]"
     >
       {paths.map((path, idx) => (
         <motion.path
@@ -109,7 +109,7 @@ const SVG = ({
             ease: "linear",
             repeat: 0,
             repeatType: "loop",
-            delay: 2,
+            delay: 1,
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
           key={`path-second-${idx}`}

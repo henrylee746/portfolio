@@ -36,7 +36,7 @@ export function RetroGrid({
   className,
   angle = 65,
   cellSize = 60,
-  opacity = 0.5,
+  opacity = 0.75,
   lightLineColor = "gray",
   darkLineColor = "gray",
   ...props
@@ -59,7 +59,7 @@ export function RetroGrid({
       style={gridStyles}
       {...props}
     >
-      <div className="absolute inset-0 will-change-transform [transform:rotateX(var(--grid-angle))]">
+      <div className="absolute inset-0 [transform:rotateX(var(--grid-angle))]">
         <div className="animate-grid [inset:0%_0px] [margin-left:-200%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] [background-size:var(--cell-size)_var(--cell-size)] [background-repeat:repeat] dark:[background-image:linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]" />
       </div>
 
