@@ -1,9 +1,8 @@
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
-import TechStackDock from "@/components/SectionOne/TechStackDock";
 import { NameTextFlip } from "@/components/SectionOne/NameTextFlip";
-import { TextGenerateEffectDock } from "./TextGenerate";
 import SocialLinksDock from "./SocialLinksDock";
+import { HeroSection } from "./HeroSection";
 
 const Intro = () => {
   return (
@@ -29,10 +28,7 @@ const Intro = () => {
           <SocialLinksDock />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
-        <TextGenerateEffectDock />
-        <TechStackDock />
-      </div>
+      <HeroSection />
     </>
   );
 };
