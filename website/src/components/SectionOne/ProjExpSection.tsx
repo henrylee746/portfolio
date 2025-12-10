@@ -1,6 +1,7 @@
 import { ProjectCards } from "@/components/SectionOne/Projects";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { WorkList } from "@/components/SectionOne/WorkList";
+import { isMobile } from "react-device-detect";
 
 const ProjExpSection = () => {
   return (
@@ -13,6 +14,15 @@ const ProjExpSection = () => {
         >
           Work Testimonials
         </FadeUpWord>
+        {isMobile ? (
+          <FadeUpWord
+            as="h2"
+            className="text-md font-medium leading-10 tracking-tight text-black dark:text-zinc-50 flex justify-center"
+            delay={0.6}
+          >
+            Hold a card to stop its movement.
+          </FadeUpWord>
+        ) : null}
         <WorkList />
       </div>
       <div className="flex flex-col items-center justify-center gap-2">

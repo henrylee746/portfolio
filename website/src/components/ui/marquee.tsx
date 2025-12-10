@@ -33,10 +33,14 @@ export function Marquee({
         .map((_, i) => (
           <div
             key={i}
+            /*group class means to style based on the state of the
+             so if anywhere in the container is active, all cards 
+             stop moving*/
             className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
               "animate-marquee-left": direction === "left",
               "animate-marquee-right": direction === "right",
               "group-hover:[animation-play-state:paused]": true,
+              "group-active:[animation-play-state:paused]": true,
               "[animation-play-state:paused]": !isInView,
             })}
           >

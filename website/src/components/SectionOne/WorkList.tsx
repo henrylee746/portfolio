@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
+import { isMobile } from "react-device-detect";
 
 const items = [
   {

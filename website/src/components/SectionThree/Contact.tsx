@@ -27,7 +27,7 @@ const Contact = () => {
       </div>
       <div className="relative p-4 h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
         <ContactTerminal />
-        {!isMobile && <Meteors />}
+        {isMobile ? null : <Meteors />}
       </div>
     </>
   );
