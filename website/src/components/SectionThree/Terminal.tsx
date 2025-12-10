@@ -6,7 +6,7 @@ import {
 
 export function ContactTerminal() {
   return (
-    <Terminal>
+    <Terminal className="overflow-y-auto">
       <TypingAnimation>
         &gt; Thanks for stopping by. Want to reach out? You can find me at:
       </TypingAnimation>
