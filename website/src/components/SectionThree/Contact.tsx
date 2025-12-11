@@ -28,7 +28,7 @@ const Contact = () => {
           </FadeUpWord>
         </div>
       </div>
-      <div className="relative p-4 h-[400px] flex justify-center items-center w-full overflow-hidden rounded-lg">
+      <div className="relative p-4 flex justify-center items-center w-full overflow-hidden rounded-lg">
         <ContactTerminal />
         {isMobile ? null : <Meteors />}
       </div>
