@@ -241,8 +241,9 @@ export const Terminal = ({
           <div className="h-2 w-2 rounded-full bg-green-500"></div>
         </div>
       </div>
-      <pre className="p-4 w-full whitespace-pre-wrap ">
-        <code className="grid gap-y-1 whitespace-pre-wrap ">
+      {/* Breaks lines when needed but preserves spacing & newlines*/}
+      <pre className="p-4 w-full whitespace-pre-wrap">
+        <code className="grid gap-y-1 whitespace-pre-wrap">
           {wrappedChildren}
         </code>
       </pre>

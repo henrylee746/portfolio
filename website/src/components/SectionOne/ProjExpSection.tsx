@@ -17,11 +17,11 @@ const ProjExpSection = () => {
         >
           Work Testimonials
         </FadeUpWord>
-        {isMobile === true ? (
+        {isMobile ? (
           <FadeUpWord
             as="h2"
             className="text-md font-medium leading-10 tracking-tight text-black dark:text-zinc-50 flex justify-center"
-            delay={0.2}
+            delay={0.1}
           >
             Hold down/tap a card to stop and read it.
           </FadeUpWord>
