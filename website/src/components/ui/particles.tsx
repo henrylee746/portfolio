@@ -35,7 +35,7 @@ const getVariantStyles = (
   ParticleStyle & { options?: Record<string, unknown> }
 > => ({
   default: {
-    count: 100,
+    count: 50,
     size: 2,
     speed: 1.5,
     opacity: 0.8,

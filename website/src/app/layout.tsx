@@ -38,7 +38,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Particles variant="snow" />
+          <Particles variant="default" />
         </ThemeProvider>
       </body>
     </html>
