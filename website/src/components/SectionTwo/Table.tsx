@@ -16,12 +16,12 @@ import { ChevronRightIcon } from "lucide-react";
 
 const items = [
   {
-    name: "Kinaxis - Incoming Jan. 2026",
+    name: "Kinaxis",
     title: "Frontend Developer Intern",
     image: "/kinaxis.jpg",
-    body: `TypeScript, Unit/E2E Testing, CSS, REST APIs`,
+    body: `TypeScript, React, CSS, REST APIs`,
     startAt: "2026-01-13",
-    endAt: "N/A",
+    endAt: "Present",
   },
   {
     name: "Carleton Blueprint",
