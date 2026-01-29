@@ -45,7 +45,7 @@ const About = () => {
           delay={0.3}
           className="flex gap-3 text-2xl font-semibold p-4 text-center"
         >
-          🏫 Education: Honours B.Sc @ Carleton University (2022-2027 Expected)
+          🏫 Education: Honours B.Sc (Computer Science) @ Carleton University
         </BlurReveal>
         <Separator orientation="horizontal" className="w-[75%]" />
 

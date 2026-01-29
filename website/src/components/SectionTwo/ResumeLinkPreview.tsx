@@ -25,7 +25,7 @@ export function ResumeLinkPreview() {
           Or Visit{" "}
           <Highlight className="text-black dark:text-white">
             <LinkPreview
-              url="https://icy-wave-580.linkyhost.com"
+              url="https://pdfhost.io/v/GjPw4kMe3w_Henry_Lee__CS_Resume__35_"
               imageSrc="/resume.png"
               isStatic={true}
               className="font-bold"
