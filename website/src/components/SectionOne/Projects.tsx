@@ -18,7 +18,7 @@ const TMDProject = ({ isDark }: { isDark: boolean }) => {
     <ExpandableCard
       title="Team Metrics Dashboard"
       src={isDark ? "/tmdDark.png" : "/tmdLight.png"}
-      description="React.js, Supabase, Node.js/Express, shadcnUI"
+      description="React.js, Node.js/Express, Supabase, shadcn/ui, Recharts"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
       <Link href="https://github.com/henrylee746/team-metrics-dashboard">
@@ -68,7 +68,7 @@ const HealthAndFitnessProject = ({ isDark }: { isDark: boolean }) => {
     <ExpandableCard
       title="Health and Fitness Club Management System"
       src={isDark ? "/fitnessDark.png" : "/fitnessLight.png"}
-      description="Next.js/TypeScript, TailwindCSS, PrismaORM, BetterAuth"
+      description="Next.js/TypeScript, TailwindCSS, Prisma ORM, BetterAuth"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
       <Link href="https://github.com/henrylee746/COMP3005FP">

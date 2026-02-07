@@ -57,7 +57,7 @@ function TestimonialCard({ item }: { item: (typeof items)[number] }) {
             {item.name}
           </div>
           <div className="text-xs text-neutral-500 dark:text-neutral-400">
-              {item.title}
+            {item.title}
           </div>
         </div>
       </div>
@@ -68,8 +68,6 @@ function TestimonialCard({ item }: { item: (typeof items)[number] }) {
 export function WorkList() {
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="from-background absolute inset-y-0 left-0 z-10 w-30" />
-      <div className="from-background absolute inset-y-0 right-0 z-10 w-30" />
       <Marquee className="py-2" direction="left">
         {[...items, ...items].map((item, index) => (
           <TestimonialCard key={index} item={item} />
