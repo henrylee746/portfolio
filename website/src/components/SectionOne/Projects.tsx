@@ -18,7 +18,7 @@ const JOCAProject = ({ isDark }: { isDark: boolean }) => {
     <ExpandableCard
       title="Jamaican Ottawa Community Association Website"
       src={isDark ? "/jocaDark.png" : "/jocaLight.png"}
-      description="Next.js, Strapi CMS, Stripe, GraphQL, TailwindCSS, Prisma ORM, GitHub Projects"
+      description="Next.js/TypeScript, Strapi CMS, Stripe, GraphQL, TailwindCSS, Prisma ORM"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
       <Link href="https://github.com/Carleton-Blueprint/JOCA">
@@ -62,7 +62,7 @@ const HealthAndFitnessProject = ({ isDark }: { isDark: boolean }) => {
     <ExpandableCard
       title="Health and Fitness Club Management System"
       src={isDark ? "/fitnessDark.png" : "/fitnessLight.png"}
-      description="Next.js/TypeScript, TailwindCSS, Prisma ORM, PostgreSQL, BetterAuth, Google Cloud, Resend API"
+      description="Next.js/TypeScript, TailwindCSS, Prisma ORM, PostgreSQL, BetterAuth, GCP, Resend API"
       classNameExpanded="[&_h4]:text-black dark:[&_h4]:text-white [&_h4]:font-medium"
     >
       <Link href="https://github.com/henrylee746/COMP3005FP">
@@ -75,7 +75,7 @@ const HealthAndFitnessProject = ({ isDark }: { isDark: boolean }) => {
         trainers, bookings, sessions, and health metrics with authentication.</p>
       <h4>🛠️ Tech Stack</h4>
       <ul className="list-disc">
-        <li>Next.js </li>
+        <li>Next.js</li>
         <li>TypeScript</li>
         <li>TailwindCSS</li>
         <li>Prisma ORM</li>
