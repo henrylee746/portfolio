@@ -19,7 +19,7 @@ const items = [
     name: "Nokia",
     title: "Incoming Web Developer Intern",
     image: "/nokia.jpg",
-    body: `React, TypeScript, Jest, PostgreSQL`,
+    body: `TBD`,
     startAt: "2026-05-04",
     endAt: "N/A",
   },
@@ -115,14 +115,12 @@ const WorkExpTable = () => {
       ),
       cell: ({ row }) => (
         <div className="flex items-center gap-2">
-          <div className="relative">
-            <Avatar className="size-6">
-              <AvatarImage src={row.original.company.image} />
-              <AvatarFallback>
-                {row.original.company.name?.slice(0, 2)}
-              </AvatarFallback>
-            </Avatar>
-          </div>
+          <Avatar className="size-6">
+            <AvatarImage src={row.original.company.image} />
+            <AvatarFallback>
+              {row.original.company.name?.slice(0, 2)}
+            </AvatarFallback>
+          </Avatar>
           <div>
             <span className="font-medium">{row.original.name}</span>
             <div className="flex items-center gap-1 text-neutral-950 dark:text-muted-foreground text-xs">
