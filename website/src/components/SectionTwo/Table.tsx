@@ -125,7 +125,7 @@ const WorkExpTable = () => {
           </div>
           <div>
             <span className="font-medium">{row.original.name}</span>
-            <div className="flex items-center gap-1 text-muted-foreground text-xs">
+            <div className="flex items-center gap-1 text-neutral-950 dark:text-muted-foreground text-xs">
               <span>{row.original.title}</span>
 
               <ChevronRightIcon size={12} />
