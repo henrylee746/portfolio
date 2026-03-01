@@ -17,15 +17,6 @@ const ProjExpSection = () => {
         >
           Work Testimonials
         </FadeUpWord>
-        {isMobile ? (
-          <FadeUpWord
-            as="h2"
-            className="text-md font-medium leading-10 tracking-tight text-black dark:text-zinc-50 flex justify-center"
-            delay={0.1}
-          >
-            Hold down/tap a card to stop and read it.
-          </FadeUpWord>
-        ) : null}
         <WorkList />
       </div>
       <div className="flex mt-4 xl:mt-0 flex-col items-center justify-center gap-2">

@@ -128,6 +128,7 @@ const Threads = ({
 }) => {
   const containerRef = useRef(null);
   const animationFrameId = useRef();
+  const isVisible = useRef(true);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -179,6 +180,17 @@ const Threads = ({
     window.addEventListener("resize", resize);
     resize();
 
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible.current = entry.isIntersecting;
+        if (entry.isIntersecting && !animationFrameId.current) {
+          animationFrameId.current = requestAnimationFrame(update);
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(container);
+
     let currentMouse = [0.5, 0.5];
     let targetMouse = [0.5, 0.5];
 
@@ -210,13 +222,18 @@ const Threads = ({
       program.uniforms.iTime.value = t * 0.001;
 
       renderer.render({ scene: mesh });
-      animationFrameId.current = requestAnimationFrame(update);
+      if (isVisible.current) {
+        animationFrameId.current = requestAnimationFrame(update);
+      } else {
+        animationFrameId.current = null;
+      }
     }
     animationFrameId.current = requestAnimationFrame(update);
 
     return () => {
       if (animationFrameId.current)
         cancelAnimationFrame(animationFrameId.current);
+      observer.disconnect();
       window.removeEventListener("resize", resize);
 
       if (enableMouseInteraction) {

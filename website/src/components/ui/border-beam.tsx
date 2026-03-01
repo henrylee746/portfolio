@@ -1,7 +1,7 @@
 "use client";
 
 import React, { CSSProperties, useEffect, useRef } from "react";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -23,6 +23,7 @@ export function BorderBeam({
   ...props
 }: BorderBeamProps) {
   const pathRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(pathRef, { once: false, amount: 0 });
 
   const updatePath = () => {
     if (pathRef.current) {
@@ -72,14 +73,12 @@ export function BorderBeam({
             offsetPath: "var(--path)",
           } as CSSProperties
         }
-        animate={{
-          offsetDistance: ["0%", "100%"],
-        }}
-        transition={{
-          duration: duration,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+        animate={isInView ? { offsetDistance: ["0%", "100%"] } : { offsetDistance: "0%" }}
+        transition={
+          isInView
+            ? { duration: duration, repeat: Infinity, ease: "linear" }
+            : { duration: 0 }
+        }
       />
     </div>
   );

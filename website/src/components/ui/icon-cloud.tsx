@@ -41,6 +41,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   const rotationRef = useRef(rotation);
   const iconCanvasesRef = useRef<HTMLCanvasElement[]>([]);
   const imagesLoadedRef = useRef<boolean[]>([]);
+  const isVisibleRef = useRef(true);
+  const animateRef = useRef<() => void>();
 
   // Create icon canvases once when icons/images change
   useEffect(() => {
@@ -297,9 +299,14 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
         ctx.restore();
       });
-      animationFrameRef.current = requestAnimationFrame(animate);
+      if (isVisibleRef.current) {
+        animationFrameRef.current = requestAnimationFrame(animate);
+      } else {
+        animationFrameRef.current = 0;
+      }
     };
 
+    animateRef.current = animate;
     animate();
 
     return () => {
@@ -308,6 +315,23 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       }
     };
   }, [icons, images, iconPositions, isDragging, mousePos, targetRotation]);
+
+  // Pause/resume based on visibility
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisibleRef.current = entry.isIntersecting;
+        if (entry.isIntersecting && animationFrameRef.current === 0 && animateRef.current) {
+          animationFrameRef.current = requestAnimationFrame(animateRef.current);
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <canvas
