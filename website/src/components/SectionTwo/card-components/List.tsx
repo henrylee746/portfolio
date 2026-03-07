@@ -1,14 +1,14 @@
 "use client";
 
 import { faker } from "@faker-js/faker";
-import type { DragEndEvent } from "@/components/kibo-ui/list";
+import type { DragEndEvent } from "@/components/ui/list/index";
 import {
   ListGroup,
   ListHeader,
   ListItem,
   ListItems,
   ListProvider,
-} from "@/components/kibo-ui/list";
+} from "@/components/ui/list/index";
 import { useState, useEffect, useMemo } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -99,7 +99,7 @@ const ProblemSolverList = () => {
         }
 
         return feature;
-      })
+      }),
     );
   };
 

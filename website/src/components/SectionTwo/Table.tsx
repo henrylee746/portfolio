@@ -1,7 +1,7 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import type { ColumnDef } from "@/components/kibo-ui/table";
+import type { ColumnDef } from "@/components/ui/table/index";
 import {
   TableBody,
   TableCell,
@@ -11,7 +11,7 @@ import {
   TableHeaderGroup,
   TableProvider,
   TableRow,
-} from "@/components/kibo-ui/table";
+} from "@/components/ui/table/index";
 import { ChevronRightIcon } from "lucide-react";
 
 const items = [
@@ -65,23 +65,6 @@ const items = [
     body: `ServiceNow, Azure DevOps, JavaScript, HTML/CSS`,
     startAt: "2024-01-09",
     endAt: "2024-04-27",
-  },
-  {
-    name: "Carleton University",
-    title: "Undergrad Teaching Assistant",
-    image: "/carleton.jpg",
-    body: ` 
-   Calculus Concepts (Math 1007)`,
-    startAt: "2023-09-05",
-    endAt: "2023-12-16",
-  },
-  {
-    name: "incubator13 - Coding Workshop Leader Intern",
-    title: "Coding Workshop Leader Intern",
-    image: "/incubator.jpg",
-    body: `HTML, Python`,
-    startAt: "2023-05-22",
-    endAt: "2023-09-05",
   },
 ];
 
