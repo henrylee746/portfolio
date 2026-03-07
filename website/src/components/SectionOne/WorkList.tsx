@@ -14,12 +14,6 @@ const items = [
     `,
   },
   {
-    name: "incubator13",
-    title: "Program Lead",
-    image: "/incubator.jpg",
-    body: `Henry had great engagement with incoming students, teaching programming fundamentals and digital literacy. Well done!`,
-  },
-  {
     name: "Carleton Blueprint",
     title: "Vice President of Projects",
     image: "/cublueprint.jpg",
