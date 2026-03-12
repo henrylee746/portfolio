@@ -2,7 +2,6 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { BlurReveal } from "@/components/ui/blur-reveal";
 import { TypingAnimation } from "@/components/ui/typing-animation";
-import { RetroGridComponent } from "./card-components/RetroGrid";
 import BentoBoxCards from "./BentoBoxCards";
 import WorkExpTable from "./Table";
 import { Highlighter } from "@/components/ui/highlighter";
@@ -70,7 +69,6 @@ const About = () => {
       <Separator orientation="horizontal" />
 
       <BentoBoxCards />
-      <RetroGridComponent />
     </>
   );
 };

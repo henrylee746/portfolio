@@ -4,7 +4,6 @@ import { ContactTerminal } from "./Terminal";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { FadeUpWord } from "@/components/ui/fade-up-word";
 import { useIsMobile } from "../mobile";
-import { Meteors } from "@/components/ui/meteors";
 
 const Contact = () => {
   const isMobile = useIsMobile();
@@ -30,7 +29,6 @@ const Contact = () => {
       </div>
       <div className="relative p-4 flex justify-center items-center w-full overflow-hidden rounded-lg">
         <ContactTerminal />
-        {isMobile ? null : <Meteors />}
       </div>
     </>
   );
