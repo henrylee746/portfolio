@@ -1,15 +1,3 @@
 ### Welcome to my Portfolio!
 
-You can find my background, experience, projects, and learn a bit more about me here.
-
-## Built With 🛠️
-
-- Next.js 16/TypeScript
-- React 19
-- TailwindCSS 4
-- dnd kit for drag-and-drop functionalities
-- Jotai for state management
-- Tanstack Table
-- Faker.js for mock data generation
-- shadcn-UI, Radix-UI, Framer-Motion for React
-- React-Icons, Lucide-React, Simple Icons
+This is my older version - can find v2 here: https://github.com/henrylee746/portfoliov2
